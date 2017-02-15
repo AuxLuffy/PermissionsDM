@@ -31,6 +31,7 @@ public class MainActivity extends Activity {
         btCheck.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                // 第二次上传
                 /*int integer = getResources().getInteger(R.integer.integer);
                 float fraction = getResources().getFraction(R.fraction.percent, 1, 1);
                 int[] intArray = getResources().getIntArray(R.array.integerarr);
