@@ -12,10 +12,18 @@
     tools:context="com.lenovo.sunzh.permissionsdm.custom.Main2Activity">
 
     <com.lenovo.sunzh.permissionsdm.custom.CustomView
+        android:id="@+id/custom"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:padding="10dp"
         custom:titleText="3333"
         custom:titleTextColo="@color/colorPrimary"
         custom:titleTextSize="20sp" />
+
+    <Button
+        android:id="@+id/button"
+        android:text="Click here!"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/custom" />
 </RelativeLayout>
