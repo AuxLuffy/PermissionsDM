@@ -31,10 +31,17 @@
         android:id="@+id/et"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:minHeight="100dp"
         android:layout_alignParentBottom="true"
         android:layout_marginBottom="50dp"
         android:hint="写点什么..."
-        android:imeOptions="actionNone"
-
+        android:background="#aaccff"
+        android:imeOptions="actionDone"
+        android:inputType="textMultiLine"
+        android:gravity="bottom"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:paddingBottom="5dp"
+        android:paddingTop="5dp"
         />
 </RelativeLayout>
