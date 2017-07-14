@@ -1,4 +1,4 @@
-package com.lenovo.sunzh.permissionsdm.custom;
+package com.lenovo.sunzh.permissionsdm.bean;
 
 import java.util.List;
 

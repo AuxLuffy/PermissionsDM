@@ -2,7 +2,7 @@ package com.lenovo.sunzh.permissionsdm;
 
 import android.app.Application;
 
-import com.lenovo.sunzh.permissionsdm.custom.ToastUtil;
+import com.lenovo.sunzh.permissionsdm.utils.ToastUtil;
 
 /**
  * Created by sunzh on 2017/7/4.

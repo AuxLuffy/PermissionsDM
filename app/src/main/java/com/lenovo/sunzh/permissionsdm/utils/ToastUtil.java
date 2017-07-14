@@ -1,4 +1,4 @@
-package com.lenovo.sunzh.permissionsdm.custom;
+package com.lenovo.sunzh.permissionsdm.utils;
 
 import android.content.Context;
 import android.widget.Toast;
