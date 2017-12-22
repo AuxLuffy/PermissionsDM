@@ -94,13 +94,28 @@ public class Main2Activity extends Activity implements View.OnClickListener {
         if (ev.getAction() == MotionEvent.ACTION_DOWN) {
             View v = getCurrentFocus();
 //            if(v != et) {
-                if (KeyboardUtil.isShouldHideInput(v, ev)) {
-                    if (KeyboardUtil.hideInputMethod(this, v)) {
+//            if (KeyboardUtil.isShouldHideInput(v, ev))
+                  /*  if (KeyboardUtil.hideInputMethod(this, v)) {
                         et.clearFocus();
                         return true;//隐藏键盘时，其他控件不响应点击事件==>注释掉则不拦截事件
-                    }
+                    }*/
+//                }
+
+            if (v != null && v instanceof EditText) {
+                Rect outRect = new Rect();
+                v.getGlobalVisibleRect(outRect);//这个方法获取的Rect值不受输入法弹出与否的影响，但getRawX和getRawY受输入法弹出与否的影响
+                if (!outRect.contains((int) ev.getRawX(), (int) ev.getRawY())) {
+                    v.clearFocus();
+                    Log.e("point", "edittext的GlobalVisibleRect：" + outRect + "点击事件：（" + ev.getRawX() + "," + ev.getRawY() + ")");
+                    KeyboardUtil.hideInputMethod(this, v);
+                    return true;
+                }
+//                if (!KeyboardUtil.touchOnEdittext(v, ev)) {
+//                    KeyboardUtil.hideInputMethod(this, v);
+//                    return true;
 //                }
             }
+
         }
         return super.dispatchTouchEvent(ev);
     }

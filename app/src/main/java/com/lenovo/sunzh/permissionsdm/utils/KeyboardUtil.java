@@ -56,11 +56,11 @@ public class KeyboardUtil {
      * @param event
      * @return
      */
-    private static boolean touchOnEdittext(View v, MotionEvent event) {
+    public static boolean touchOnEdittext(View v, MotionEvent event) {
         if (v != null && (v instanceof EditText)) {
             int[] leftTop = {0, 0};
             v.getLocationInWindow(leftTop);
-            int left = leftTop[0], top = leftTop[1], bottom = top + v.getHeight(), right = left + v.getWidth();
+            int left = leftTop[0], top = leftTop[1];
             if (v.getLeft() < event.getX() && v.getRight() > event.getX() && v.getTop() < event.getY() && v.getBottom() > event.getY()) {
                 return true;
             }
