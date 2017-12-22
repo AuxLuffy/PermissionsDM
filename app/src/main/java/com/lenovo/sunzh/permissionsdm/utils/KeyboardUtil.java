@@ -27,6 +27,13 @@ public class KeyboardUtil {
         return false;
     }
 
+    /**
+     * 是否应该隐藏输入法
+     *
+     * @param v
+     * @param event
+     * @return
+     */
     public static boolean isShouldHideInput(View v, MotionEvent event) {
         if (v != null && (v instanceof EditText)) {
             int[] leftTop = {0, 0};
@@ -42,12 +49,19 @@ public class KeyboardUtil {
         return false;
     }
 
+    /**
+     * 点击事件是否在edittext上
+     *
+     * @param v
+     * @param event
+     * @return
+     */
     private static boolean touchOnEdittext(View v, MotionEvent event) {
         if (v != null && (v instanceof EditText)) {
             int[] leftTop = {0, 0};
             v.getLocationInWindow(leftTop);
             int left = leftTop[0], top = leftTop[1], bottom = top + v.getHeight(), right = left + v.getWidth();
-            if (left < event.getX() && v.getRight() > event.getX() && v.getTop() < event.getY() && v.getBottom() > event.getY()) {
+            if (v.getLeft() < event.getX() && v.getRight() > event.getX() && v.getTop() < event.getY() && v.getBottom() > event.getY()) {
                 return true;
             }
         }
